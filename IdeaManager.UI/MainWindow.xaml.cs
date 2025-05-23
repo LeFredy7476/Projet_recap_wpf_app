@@ -1,4 +1,5 @@
 ﻿using System.Text;
+using IdeaManager.UI.ViewModels;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,8 +17,10 @@ namespace IdeaManager.UI;
 /// </summary>
 public partial class MainWindow : Window
 {
-    public MainWindow()
+    public MainWindow(MainViewModel viewModel)
     {
         InitializeComponent();
+        
+        DataContext = viewModel;
     }
 }
